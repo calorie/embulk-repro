@@ -1,0 +1,26 @@
+in:
+  type: file
+  path_prefix: ./json_payload.tsv
+  parser:
+    type: csv
+    delimiter: "\t"
+    charset: UTF-8
+    newline: LF
+    skip_header_lines: 1
+    columns:
+    - {name: json_payload, type: string}
+filters:
+- type: expand_json
+  json_column_name: json_payload
+  root: $.
+  expanded_columns:
+  - {name: a, type: long}
+  - {name: b, type: json}
+  - {name: e, type: json}
+out:
+  type: elasticsearch
+  mode: replace
+  nodes:
+  - {host: elasticsearch, port: 9200}
+  index: test
+  index_type: test
