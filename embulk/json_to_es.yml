@@ -1,0 +1,14 @@
+in:
+  type: file
+  path_prefix: ./repro.json
+  parser:
+    type: json
+    columns:
+    - {name: a, type: json}
+out:
+  type: elasticsearch
+  mode: replace
+  nodes:
+  - {host: elasticsearch, port: 9200}
+  index: test
+  index_type: test
