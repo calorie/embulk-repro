@@ -1,0 +1,16 @@
+in:
+  type: file
+  path_prefix: ./data.json
+  parser:
+    type: jsonl
+    charset: UTF-8
+    newline: CRLF
+    columns:
+    - {name: a, type: long}
+out:
+  type: elasticsearch
+  mode: insert
+  nodes:
+  - {host: elasticsearch, port: 9200}
+  index: test
+  index_type: test
