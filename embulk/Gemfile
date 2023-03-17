@@ -1,6 +1,11 @@
 source 'https://rubygems.org/'
 
+gem 'bundler'
+gem 'embulk'
 gem 'embulk-filter-expand_json'
-gem 'embulk-parser-jsonl'
-gem 'embulk-formatter-jsonl'
-gem 'embulk-output-elasticsearch'
+gem 'liquid'
+gem 'msgpack'
+
+source 'https://rubygems.pkg.github.com/calorie' do
+  gem 'embulk-output-elasticsearch', '0.6.0.snapshot'
+end

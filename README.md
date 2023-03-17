@@ -22,3 +22,7 @@ docker compose up elasticsearch
 ruby jsonl.rb
 docker compose run --rm embulk java -jar /usr/loca/bin/embulk run memory_leak.yml
 ```
+
+```
+docker compose run --rm embulk java -cp "/jar/*" org.embulk.cli.Main run -b /embulk /app/stdout.yml
+```

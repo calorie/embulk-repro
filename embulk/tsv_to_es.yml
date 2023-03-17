@@ -1,6 +1,6 @@
 in:
   type: file
-  path_prefix: ./json_payload.tsv
+  path_prefix: /app/json_payload.tsv
   parser:
     type: csv
     delimiter: "\t"
@@ -19,8 +19,8 @@ filters:
   - {name: e, type: json}
 out:
   type: elasticsearch
-  mode: replace
+  mode: insert
   nodes:
-  - {host: elasticsearch, port: 9200}
+  - {host: opensearch, port: 9200}
   index: test
   index_type: test

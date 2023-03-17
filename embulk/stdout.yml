@@ -1,0 +1,16 @@
+in:
+  type: file
+  path_prefix: /app/data.json
+  parser:
+    type: json
+    charset: UTF-8
+    newline: CRLF
+    columns:
+    - {name: a, type: long}
+out:
+  type: elasticsearch
+  mode: replace
+  nodes:
+  - {host: opensearch, port: 9200}
+  index: test3
+  bulk_actions: 10000
