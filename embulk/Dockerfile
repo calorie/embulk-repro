@@ -30,7 +30,7 @@ RUN java -jar /jar/embulk.jar gem install msgpack bundler liquid
 COPY Gemfile /embulk/Gemfile
 COPY .bundle /embulk/.bundle
 # COPY Gemfile.lock /embulk/Gemfile.lock
-RUN java -jar /jar/embulk.jar bundle config --global rubygems.pkg.github.com calorie:
+# RUN java -jar /jar/embulk.jar bundle config --global rubygems.pkg.github.com calorie:
 RUN java -jar /jar/embulk.jar bundle install --path .
 
 # ENTRYPOINT ["java", "-jar", "/usr/local/bin/embulk"]

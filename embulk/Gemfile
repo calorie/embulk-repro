@@ -3,9 +3,10 @@ source 'https://rubygems.org/'
 gem 'bundler'
 gem 'embulk'
 gem 'embulk-filter-expand_json'
+gem 'embulk-output-opensearch'
 gem 'liquid'
 gem 'msgpack'
 
-source 'https://rubygems.pkg.github.com/calorie' do
-  gem 'embulk-output-opensearch', '1.0.0'
-end
+# source 'https://rubygems.pkg.github.com/calorie' do
+#   gem 'embulk-output-opensearch', '1.0.0'
+# end
