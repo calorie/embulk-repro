@@ -14,7 +14,7 @@ ENV MALLOC_CONF "prof:true,lg_prof_interval:30,lg_prof_sample:17,prof_prefix:/tm
 # ENV MALLOC_CONF "prof_leak:true,lg_prof_sample:0,prof_final:true"
 
 RUN mkdir /jar
-RUN wget -q https://dl.embulk.org/embulk-0.10.43.jar -O /jar/embulk.jar
+RUN wget -q https://dl.embulk.org/embulk-0.10.44.jar -O /jar/embulk.jar
 
 RUN wget -q https://repo1.maven.org/maven2/org/jruby/jruby-complete/9.4.2.0/jruby-complete-9.4.2.0.jar -O /jar/jruby.jar
 

@@ -7,6 +7,8 @@ in:
     newline: CRLF
     columns:
     - {name: a, type: long}
+    - {name: b, type: json}
+    - {name: e, type: json}
 out:
   type: opensearch
   mode: replace

@@ -1,7 +1,7 @@
 source 'https://rubygems.org/'
 
 gem 'bundler'
-gem 'embulk'
+gem 'embulk', '0.10.44'
 gem 'embulk-filter-expand_json'
 gem 'embulk-output-opensearch'
 gem 'liquid'
